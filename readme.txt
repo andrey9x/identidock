@@ -1,10 +1,4 @@
+chmod +x cmd.sh
 docker build -t identidock .
 
-docker run identidock whoami
-
-docker run -d -P --name port-test identidock
-
-docker port port-test
-
-http://localhost:32768/
-http://localhost:32769/
+docker run -e "ENV=DEV" -p 5000:5000 identidock
