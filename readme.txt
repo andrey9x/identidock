@@ -1,6 +1,10 @@
 docker build -t identidock .
 
-docker run -d -p 9090:9090 -p 9191:9191 identidock
+docker run identidock whoami
 
-curl localhost:9090
-curl localhost:9191
+docker run -d -P --name port-test identidock
+
+docker port port-test
+
+http://localhost:32768/
+http://localhost:32769/
