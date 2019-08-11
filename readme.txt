@@ -1,4 +1,3 @@
-chmod +x cmd.sh
-docker build -t identidock .
+docker-compose up
 
-docker run -e "ENV=DEV" -p 5000:5000 identidock
+curl localhost:5000
