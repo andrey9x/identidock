@@ -2,7 +2,7 @@ FROM python:3.7
 
 RUN groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 RUN pip install --upgrade pip \
-    && pip install Flask==1.0.4 uWSGI==2.0.16 requests==2.22.0
+    && pip install Flask==1.0.4 uWSGI==2.0.16 requests==2.22.0 redis==3.3.6
 
 WORKDIR /app
 COPY app /app
