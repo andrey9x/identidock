@@ -1,3 +1,13 @@
 docker-compose up
 
 curl localhost:5000
+
+# test
+1)
+docker build -t identidock .
+docker run identidock python tests.py
+2)
+docker-compose up -d
+docker-compose exec identidock python tests.py
+3)
+docker run -e ENV=UNIT identidock
